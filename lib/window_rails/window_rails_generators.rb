@@ -431,7 +431,7 @@ module WindowRailsGenerators
     else
       f = "function(event){ #{f}; }"
     end
-    self << "if($('#{escape_javascript(field_id.to_s)}')){ $('#{escape_javascript(field_id.to_s)}').observe('change', #{f}); }"
+    self << "if($('#{escape_javascript(field_id.to_s)}').length){ $('#{escape_javascript(field_id.to_s)}').observe('change', #{f}); }"
   end
 
   private
